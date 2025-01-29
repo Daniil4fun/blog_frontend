@@ -2,7 +2,8 @@ import axios, { AxiosRequestConfig } from "axios";
 import store from "@/store";
 import { addAlertWithParams } from "@/store/thunks/alertThunks";
 
-export const REACT_APP_API_SERVER = 'http://localhost:5000';
+export const REACT_APP_API_SERVER = 'http://109.172.91.217:5000';
+// export const REACT_APP_API_SERVER = 'http://localhost:5000';
 
 const REACT_APP_SERVER_BASE_URL = '/api/';
 const REACT_APP_SERVER_URL = REACT_APP_API_SERVER + REACT_APP_SERVER_BASE_URL;

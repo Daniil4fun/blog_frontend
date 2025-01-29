@@ -79,6 +79,8 @@ const AuthPage = () => {
                                 label="Логин"
                                 fullWidth
                                 required
+                                error={username.length < 4}
+                                helperText={username.length < 4 ? "Минимум 5 символов" : false}
                             />
                         </Box>
                         <Box sx={{ mt: '15px' }}>
@@ -90,6 +92,8 @@ const AuthPage = () => {
                                 type={isPassVisible ? "text" : "password"}
                                 fullWidth
                                 required
+                                error={password.length < 4}
+                                helperText={password.length < 4 ? "Минимум 5 символов" : false}
                                 slotProps={{
                                     input: {
                                         endAdornment: (
@@ -109,6 +113,7 @@ const AuthPage = () => {
                             sx={{ m: '0 auto', width: '350px' }}
                             variant="contained"
                             type="submit"
+                            disabled={username.length < 4 || password.length < 4}
                             loading={isLoading}
                             loadingPosition="start"
                         >
@@ -120,7 +125,7 @@ const AuthPage = () => {
                             color="primary"
                             onClick={onClickLink}
                         >
-                            {isRegistration ? 'Уже зарегистрированы?' : 'Есть аккаунт?'}
+                            {isRegistration ? 'Уже зарегистрированы?' : 'Нет аккаунта?'}
                         </StyledLink>
                     </Box>
                 </Box>
