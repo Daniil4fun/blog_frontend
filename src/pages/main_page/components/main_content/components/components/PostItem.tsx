@@ -34,7 +34,6 @@ const PostItem: FC<PostItemProps> = ({
 
     return <PostItemWrapper
         elevation={2}
-        key={title}
     >
         <PostItemHeader>
             <TitleAndContentWrapper>

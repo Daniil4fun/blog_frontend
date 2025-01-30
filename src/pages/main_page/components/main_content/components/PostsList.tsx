@@ -27,7 +27,7 @@ const PostsList: FC<PostsListProps> = ({
         </PostsLoaderComponent>
     }
 
-    return <PostsListWrapper postsListLength={posts.length}>
+    return <PostsListWrapper $postsListLength={posts.length}>
         {posts.map(({ id, content, media, title, updatedAt, UserId, User }) => {
             return <PostItem
                 key={id}

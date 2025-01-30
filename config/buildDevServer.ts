@@ -8,6 +8,9 @@ export function buildDevServer(options: BuildOptions): Configuration {
         historyApiFallback: true,
         client: {
             overlay: false
-        }
+        },
+        static: {
+            directory: options.paths.public
+        },
     }
 }

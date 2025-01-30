@@ -8,9 +8,10 @@ const Sidebar: FC<{
 }> = ({
     children,
     isPost,
-    side
+    side,
+    ...props
 }) => {
-        return <SidebarWrapper isPost={isPost} side={side}>
+        return <SidebarWrapper isPost={isPost} side={side} {...props}>
             {children}
         </SidebarWrapper>
     }
